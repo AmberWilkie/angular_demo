@@ -8,6 +8,7 @@
     <script src="js/controllers.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
 </head>
 <body>
 <div data-ng-app="demoApp" data-ng-controller="mainController">
@@ -17,7 +18,7 @@
         <button type="submit">ADD</button>
     </form>
 
-    <div data-ng-repeat="user in users">
+    <div data-ng-repeat="user in users | sortByFirstName">
         <say-hello message="Hello"></say-hello>
     </div>
 </div>
